@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-29T14:04:56.268970" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Dawid.Chec\PycharmProjects\Android_Test\Tests\Login.robot">
+<kw name="Set Library Search Order" owner="BuiltIn" type="SETUP">
+<arg>AppiumLibrary</arg>
+<arg>Selenium2Library</arg>
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<status status="PASS" start="2024-05-29T14:04:56.507977" elapsed="0.000000"/>
+</kw>
+<test id="s1-t1" name="Login and Log out from Zengi Application" line="8">
+<kw name="Open Zangi Application" owner="android-res">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.beint.zangi</arg>
+<arg>appActivity=${ZENGI-APPLICATION-ACTIVITY}</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-29T14:04:56.507977" elapsed="20.109121"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:04:56.507977" elapsed="20.110115"/>
+</kw>
+<kw name="Choose Sign/in button" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:19.112145" level="INFO">xpath criteria: //android.widget.TextView[@text='Sign-in']</msg>
+<arg>${SIGN-IN-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:16.618092" elapsed="2.494053"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:19.113143" level="INFO">Clicking element '//android.widget.TextView[@text='Sign-in']'.</msg>
+<msg time="2024-05-29T14:05:19.638974" level="INFO">xpath criteria: //android.widget.TextView[@text='Sign-in']</msg>
+<arg>${SIGN-IN-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:19.113143" elapsed="0.525831"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:16.618092" elapsed="3.020882"/>
+</kw>
+<kw name="Type in Zengi number" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:19.781057" level="INFO">criteria is com.beint.zangi:id/user_id</msg>
+<arg>${ZANGINUMBER-TEXTFIELD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:19.638974" elapsed="0.142083"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:20.402157" level="INFO">criteria is com.beint.zangi:id/email_confirm</msg>
+<arg>${ENTER-ZANGI-NUMBER-TEXT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:19.781614" elapsed="0.620543"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:21.109388" level="INFO">xpath criteria: //android.widget.ImageButton[@index='1']</msg>
+<arg>${NEXT-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:20.402157" elapsed="0.707231"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:21.114924" level="INFO">Typing text '10-2935-6693' into text field 'id=com.beint.zangi:id/user_id'</msg>
+<msg time="2024-05-29T14:05:21.966208" level="INFO">criteria is com.beint.zangi:id/user_id</msg>
+<arg>${ZANGINUMBER-TEXTFIELD}</arg>
+<arg>${ZANGINUMBER-USER1}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:21.109388" elapsed="0.856820"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:22.192213" level="INFO">xpath criteria: //android.widget.ImageButton[@index='1']</msg>
+<arg>${NEXT-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:21.966208" elapsed="0.226005"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:22.193212" level="INFO">Clicking element '//android.widget.ImageButton[@index='1']'.</msg>
+<msg time="2024-05-29T14:05:23.173855" level="INFO">xpath criteria: //android.widget.ImageButton[@index='1']</msg>
+<arg>${NEXT-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:22.192213" elapsed="0.981642"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:19.638974" elapsed="3.534881"/>
+</kw>
+<kw name="Type in Password" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:24.660106" level="INFO">criteria is com.beint.zangi:id/text_input_end_icon
+criteria is com.beint.zangi:id/text_input_end_icon</msg>
+<arg>${SHOW-PASSWORD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:23.173855" elapsed="1.486251"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:25.710499" level="INFO">xpath criteria: //android.widget.EditText[@text='Password']</msg>
+<arg>${PASSWORD-FIELD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:24.661104" elapsed="1.049395"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:25.711497" level="INFO">Typing text 'kufowo92' into text field '//android.widget.EditText[@text='Password']'</msg>
+<msg time="2024-05-29T14:05:26.121189" level="INFO">xpath criteria: //android.widget.EditText[@text='Password']</msg>
+<arg>${PASSWORD-FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:25.710499" elapsed="0.410690"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:26.122183" level="INFO">Clicking element '//android.widget.ImageButton[@index='1']'.</msg>
+<msg time="2024-05-29T14:05:28.473366" level="INFO">xpath criteria: //android.widget.ImageButton[@index='1']</msg>
+<arg>${NEXT-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:26.121189" elapsed="2.352177"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:23.173855" elapsed="5.299511"/>
+</kw>
+<kw name="Accept Storege permission" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:33.114193" level="INFO">criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv
+criteria is com.beint.zangi:id/header_tv</msg>
+<arg>${STORAGE-PERMISSION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:28.473366" elapsed="4.640827"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:33.154388" level="INFO">criteria is com.beint.zangi:id/continue_btn</msg>
+<arg>${CONTINUE}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:33.114193" elapsed="0.040195"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:33.155891" level="INFO">Clicking element 'id=com.beint.zangi:id/continue_btn'.</msg>
+<msg time="2024-05-29T14:05:33.343646" level="INFO">criteria is com.beint.zangi:id/continue_btn</msg>
+<arg>${CONTINUE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:33.154388" elapsed="0.189258"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:28.473366" elapsed="4.870280"/>
+</kw>
+<kw name="Accept Permission" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:34.580702" level="INFO">criteria is com.android.permissioncontroller:id/permission_message
+criteria is com.android.permissioncontroller:id/permission_message
+criteria is com.android.permissioncontroller:id/permission_message</msg>
+<arg>${PERMISSION-MESSAGE}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:33.344643" elapsed="1.236059"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:34.639255" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<arg>${ALLOW}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:34.580702" elapsed="0.058553"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:34.640277" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_button'.</msg>
+<msg time="2024-05-29T14:05:34.928081" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<arg>${ALLOW}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:34.639255" elapsed="0.288826"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:33.344643" elapsed="1.583438"/>
+</kw>
+<kw name="Type in user name" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:38.479736" level="INFO">xpath criteria: //android.widget.TextView[@text='Your Profile']
+xpath criteria: //android.widget.TextView[@text='Your Profile']
+xpath criteria: //android.widget.TextView[@text='Your Profile']
+xpath criteria: //android.widget.TextView[@text='Your Profile']
+xpath criteria: //android.widget.TextView[@text='Your Profile']</msg>
+<arg>${YOUR-PROFILE}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:34.929294" elapsed="3.550442"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:38.752443" level="INFO">criteria is com.beint.zangi:id/edit_first_name</msg>
+<arg>${FIRST-NAME-FIELD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:38.479736" elapsed="0.272707"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:38.753440" level="INFO">Typing text 'UserOneFirstName' into text field 'id=com.beint.zangi:id/edit_first_name'</msg>
+<msg time="2024-05-29T14:05:39.834581" level="INFO">criteria is com.beint.zangi:id/edit_first_name</msg>
+<arg>${FIRST-NAME-FIELD}</arg>
+<arg>${FIRST-NAME-USER1}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:38.752443" elapsed="1.082138"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:40.629065" level="INFO">criteria is com.beint.zangi:id/edit_last_name</msg>
+<arg>${LAST-NAME-FIELD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:39.834581" elapsed="0.794484"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:40.630573" level="INFO">Typing text 'UserOneLastName' into text field 'id=com.beint.zangi:id/edit_last_name'</msg>
+<msg time="2024-05-29T14:05:40.810733" level="INFO">criteria is com.beint.zangi:id/edit_last_name</msg>
+<arg>${LAST-NAME-FIELD}</arg>
+<arg>${LAST-NAME-USER1}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:40.629065" elapsed="0.181668"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:40.928709" level="INFO">criteria is com.beint.zangi:id/continue_btn</msg>
+<arg>${CONTIUE-YOUR-PROFILE}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:40.810733" elapsed="0.117976"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:40.930218" level="INFO">Clicking element 'id=com.beint.zangi:id/continue_btn'.</msg>
+<msg time="2024-05-29T14:05:41.330452" level="INFO">criteria is com.beint.zangi:id/continue_btn</msg>
+<arg>${CONTIUE-YOUR-PROFILE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:40.928709" elapsed="0.401743"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:34.929294" elapsed="6.401158"/>
+</kw>
+<kw name="Set Password" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:42.505965" level="INFO">xpath criteria: //android.widget.TextView[@text='Set Password']</msg>
+<arg>${SET-PASSWORD-VIEW}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:41.331526" elapsed="1.174439"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:42.507000" level="INFO">Typing text 'kufowo92' into text field 'id=com.beint.zangi:id/password_edit_text'</msg>
+<msg time="2024-05-29T14:05:44.125767" level="INFO">criteria is com.beint.zangi:id/password_edit_text</msg>
+<arg>${ENTER-YOUR-PASSWORD-FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:42.505965" elapsed="1.619802"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:44.127164" level="INFO">Typing text 'kufowo92' into text field 'id=com.beint.zangi:id/password_confirm_edit_text'</msg>
+<msg time="2024-05-29T14:05:45.310128" level="INFO">criteria is com.beint.zangi:id/password_confirm_edit_text</msg>
+<arg>${CONFIRM-YOUR-PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:44.125767" elapsed="1.184361"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:45.312148" level="INFO">Clicking element 'id=com.beint.zangi:id/continue_btn'.</msg>
+<msg time="2024-05-29T14:05:45.988966" level="INFO">criteria is com.beint.zangi:id/continue_btn</msg>
+<arg>${CONITNUE-AFTER-SETTING-PASSWORD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:45.310128" elapsed="0.678838"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:41.331526" elapsed="4.657440"/>
+</kw>
+<kw name="Confirm Zengi's policy" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:46.856094" level="INFO">xpath criteria: //android.widget.TextView[@text='No Data Collection']</msg>
+<arg>${SECURITY-CONFIRMATION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:45.989964" elapsed="0.866130"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:46.861107" level="INFO">Clicking element 'id=com.beint.zangi:id/next_button_id'.</msg>
+<msg time="2024-05-29T14:05:47.990104" level="INFO">criteria is com.beint.zangi:id/next_button_id</msg>
+<arg>${NEXT-SCURITY-PAGE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:46.856094" elapsed="1.134010"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:48.127887" level="INFO">xpath criteria: //android.widget.TextView[@text='Best Tech for Data Saving']</msg>
+<arg>${SAVE-CONFIRMATION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:47.990104" elapsed="0.137783"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:48.128940" level="INFO">Clicking element 'id=com.beint.zangi:id/next_button_id'.</msg>
+<msg time="2024-05-29T14:05:49.096977" level="INFO">criteria is com.beint.zangi:id/next_button_id</msg>
+<arg>${NEXT-SCURITY-PAGE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:48.127887" elapsed="0.969598"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:49.378412" level="INFO">xpath criteria: //android.widget.TextView[@text='The Best Quality']</msg>
+<arg>${RELIABLE-CONFIRMATION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:49.097485" elapsed="0.280927"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:49.379920" level="INFO">Clicking element 'id=com.beint.zangi:id/next_button_id'.</msg>
+<msg time="2024-05-29T14:05:49.755944" level="INFO">criteria is com.beint.zangi:id/next_button_id</msg>
+<arg>${NEXT-SCURITY-PAGE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:49.378412" elapsed="0.377532"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:50.022589" level="INFO">xpath criteria: //android.widget.TextView[@text='Fastest Text &amp; File Transfer']</msg>
+<arg>${FAST-CONFIRMATION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:49.755944" elapsed="0.266645"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:50.024072" level="INFO">Clicking element 'id=com.beint.zangi:id/next_button_id'.</msg>
+<msg time="2024-05-29T14:05:50.647254" level="INFO">criteria is com.beint.zangi:id/next_button_id</msg>
+<arg>${NEXT-SCURITY-PAGE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:50.022589" elapsed="0.624665"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:51.449542" level="INFO">xpath criteria: //android.widget.TextView[@text='Added Benefits with PREMIUM']</msg>
+<arg>${ZANGI-PREMIUM-ADV}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:50.647254" elapsed="0.802288"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:51.451532" level="INFO">Clicking element 'id=com.beint.zangi:id/next_button_id'.</msg>
+<msg time="2024-05-29T14:05:51.811489" level="INFO">criteria is com.beint.zangi:id/next_button_id</msg>
+<arg>${START-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:51.450543" elapsed="0.360946"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:45.989964" elapsed="5.822530"/>
+</kw>
+<kw name="Log out" owner="android-res">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:53.794412" level="INFO">xpath criteria: //android.widget.LinearLayout[@index='3']</msg>
+<arg>${SETTINGS-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:51.813480" elapsed="1.980932"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:53.796452" level="INFO">Clicking element '//android.widget.LinearLayout[@index='3']'.</msg>
+<msg time="2024-05-29T14:05:56.634497" level="INFO">xpath criteria: //android.widget.LinearLayout[@index='3']</msg>
+<arg>${SETTINGS-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:53.794412" elapsed="2.840085"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:56.963605" level="INFO">criteria is com.beint.zangi:id/user_info_Liner_layout_id</msg>
+<arg>${PROFILE-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:56.636046" elapsed="0.327559"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:56.964642" level="INFO">Clicking element 'id=com.beint.zangi:id/user_info_Liner_layout_id'.</msg>
+<msg time="2024-05-29T14:05:57.530430" level="INFO">criteria is com.beint.zangi:id/user_info_Liner_layout_id</msg>
+<arg>${PROFILE-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:56.963605" elapsed="0.566825"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:58.714372" level="INFO">criteria is com.beint.zangi:id/sign_out_btn
+criteria is com.beint.zangi:id/sign_out_btn</msg>
+<arg>${SIGN-OUT-BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:57.530430" elapsed="1.183942"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:58.716054" level="INFO">Clicking element 'id=com.beint.zangi:id/sign_out_btn'.</msg>
+<msg time="2024-05-29T14:05:58.959179" level="INFO">criteria is com.beint.zangi:id/sign_out_btn</msg>
+<arg>${SIGN-OUT-BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:58.714372" elapsed="0.244807"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:59.622421" level="INFO">xpath criteria: //android.widget.TextView[@text='KEEP HISTORY']
+xpath criteria: //android.widget.TextView[@text='KEEP HISTORY']</msg>
+<arg>${KEEP-HISTORY}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-05-29T14:05:58.959179" elapsed="0.663242"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-29T14:05:59.623413" level="INFO">Clicking element '//android.widget.TextView[@text='KEEP HISTORY']'.</msg>
+<msg time="2024-05-29T14:05:59.836133" level="INFO">xpath criteria: //android.widget.TextView[@text='KEEP HISTORY']</msg>
+<arg>${KEEP-HISTORY}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-29T14:05:59.622421" elapsed="0.213712"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:05:51.812494" elapsed="8.023639"/>
+</kw>
+<status status="PASS" start="2024-05-29T14:04:56.507977" elapsed="63.328156"/>
+</test>
+<status status="PASS" start="2024-05-29T14:04:56.272767" elapsed="63.564432"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
